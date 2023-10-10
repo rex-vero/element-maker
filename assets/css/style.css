@@ -1,9 +1,102 @@
-#form {
+@keyframes loader {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shadow {
+  0% {
+    box-shadow: 5px 0 20px white;
+  }
+  25% {
+    box-shadow: 0px 10px 20px white;
+  }
+  75% {
+    box-shadow: 10px 5px 20px white;
+  }
+  100% {
+    box-shadow: 0px 5px 20px white;
+  }
+}
+html {
+  animation: loader 1.5s ease-in-out 0s 1 alternate forwards;
+}
+html body {
+  background-image: url("../../coded-data.gif");
+  background-position: center;
+  background-size: cover;
+  background-clip: content-box;
+}
+html body #form {
   display: flex;
 }
-
-#rbtn {
+html body #form .card {
+  background-color: rgba(0, 0, 0, 0.123);
+  box-shadow: 5px 0 20px white;
+  animation: shadow 3s ease-in-out 0s infinite alternate forwards;
+}
+html body #form .card .color {
+  border: none;
+  width: 100%;
+}
+html body #form .card #btn {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.123);
+  padding: 5px 15px;
+}
+html body #form .card #btn:hover {
+  transform: scale(1.2);
+  transition: 1s;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 1px solid black;
+}
+html body #form .card input {
+  outline: none;
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.705);
+}
+html body #form .card input:focus-visible {
+  border: 1px solid rgb(21, 255, 0);
+}
+html body #form .card input:focus-visible .round {
+  border-radius: 5px;
+}
+html body #card {
   display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+html body #card .card {
+  background-color: rgba(0, 0, 0, 0.123);
+  box-shadow: 5px 0 20px white;
+  animation: shadow 3s ease-in-out 0s infinite alternate forwards;
+}
+html body #card .down {
+  border-bottom-left-radius: 19px;
+  border-bottom-right-radius: 19px;
+}
+html #rbtn {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.123);
+  padding: 5px 15px;
+}
+html #rbtn:hover {
+  transform: scale(1.2);
+  transition: 1s;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 1px solid black;
+}
+html .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

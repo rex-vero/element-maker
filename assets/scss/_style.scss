@@ -1,0 +1,74 @@
+@import'_keyframe';
+@import'_mixin';
+
+html {
+
+    animation: loader 1.5s ease-in-out 0s 1 alternate forwards;
+
+    body {
+        background-image: url('../../coded-data.gif');
+        background-position: center;
+        background-size: cover;
+        background-clip: content-box;
+
+
+        #form {
+            display: flex;
+
+            .card {
+                @include card();
+
+                .color {
+                    border: none;
+                    width: 100%;
+                }
+
+                #btn {
+                    @include btn();
+                }
+
+                input {
+                    outline: none;
+                    border: 1px solid black;
+                    background-color: rgba(255, 255, 255, 0.705);
+
+                    &:focus-visible {
+                        border: 1px solid rgb(21, 255, 0);
+
+                        .round {
+                            border-radius: 5px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        #card {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+            .card {
+                @include card();
+            }
+
+            .down {
+                border-bottom-left-radius: 19px;
+                border-bottom-right-radius: 19px;
+            }
+        }
+
+    }
+
+    #rbtn {
+        @include btn();
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
