@@ -24,7 +24,7 @@ html {
   animation: loader 1.5s ease-in-out 0s 1 alternate forwards;
 }
 html body {
-  background-image: url("../../coded-data.gif");
+  background-image: url("../images/coded-data.gif");
   background-position: center;
   background-size: cover;
   background-clip: content-box;
